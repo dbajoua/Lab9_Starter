@@ -84,6 +84,13 @@
       <button>End Timer</button>
       <button>Console Trace</button>
       <button>Trigger a Global Error</button>
+      <!-- I added buttons below-->
+      <button>Try Catch</button>
+      <button>Do Not Click</button>
+      <button>Error Button</button>
+
+
+      
     </section>
   </main>
 
@@ -102,6 +109,207 @@
 
     // Start your code here
     // You may move this JS to another file if you wish
+   
+    //Step 2
+
+    //Console Log Button
+    let ConsoleLogButton = errorBtns[0];
+    ConsoleLogButton.addEventListener('click', ConsoleLogButtonFunc);
+    
+    function ConsoleLogButtonFunc() {
+      console.log("Hello this is a message for the first button");
+    }
+
+    //Console Error Button
+    let ConsoleErrorButton = errorBtns[1];
+    ConsoleErrorButton.addEventListener('click', ConsoleErrorButtonFunc);
+
+    function ConsoleErrorButtonFunc() {
+      console.error("you have made some error!!!")
+    }
+
+    //Console Count Button
+    let ConsoleCntButton = errorBtns[2];
+    ConsoleCntButton.addEventListener('click', ConsoleCntButtonFunc);
+
+    function ConsoleCntButtonFunc() {
+      console.count("Console Count Pressed");
+    }
+
+    //Console Warn Button
+    let ConsoleWarnButton = errorBtns[3];
+    ConsoleWarnButton.addEventListener('click', ConsoleWarnButtonFunc);
+
+    function ConsoleWarnButtonFunc() {
+      console.warn("This is a warning!!!!!!");
+    }
+
+    //Console Assert Button
+    let ConsoleAssertButton = errorBtns[4];
+    ConsoleAssertButton.addEventListener('click', ConsoleAssertButtonFunc);
+
+    const errMsg = "Asserted Arithmetic for 7+12 is incorrect";
+    function ConsoleAssertButtonFunc() {
+      console.assert(7+5 === 0, errMsg);
+    }
+
+    //Console Clear Button
+    let ConsoleClearButton = errorBtns[5];
+    ConsoleClearButton.addEventListener('click', ConsoleClearButtonFunc);
+
+    function ConsoleClearButtonFunc() {
+      console.clear();
+    }
+
+    //Console Dir Button
+    let ConsoleDirButton = errorBtns[6];
+    ConsoleDirButton.addEventListener('click', ConsoleDirButtonFunc);
+
+    function ConsoleDirButtonFunc() {
+      console.dir(errorBtns[6]);
+    }
+
+    //Console dirxml Button
+    let ConsoleDirxmlButton = errorBtns[7];
+    ConsoleDirxmlButton.addEventListener('click', ConsoleDirxmlButtonFunc);
+
+    function ConsoleDirxmlButtonFunc() {
+      console.dirxml(errorBtns[7]);
+    }
+
+    //Console group start Button
+    let ConsolegsButton = errorBtns[8];
+    ConsolegsButton.addEventListener('click', gsFunc);
+
+    function gsFunc() {
+      console.group();
+    }
+
+    //Console group end Button
+    let ConsoleEndButton = errorBtns[9];
+    ConsoleEndButton.addEventListener('click', endFunc);
+
+    function endFunc() {
+      console.groupEnd();
+    }
+
+    //Console table Button
+    let ConsoleTableButton = errorBtns[10];
+    ConsoleTableButton.addEventListener('click', tableFunc);
+
+    function tableFunc() {
+      console.table(["CSE","ECE","COG SCI"]);
+    }
+
+    //Console timer Button
+    let ConsoleTimerButton = errorBtns[11];
+    ConsoleTimerButton.addEventListener('click', timerFunc);
+
+    function timerFunc() {
+      console.time("Timer Button");
+      console.log("time passing"); 
+    }
+
+    //Console end timer Button
+    let ConsoleEndtButton = errorBtns[12];
+    ConsoleEndtButton.addEventListener('click', EndtFunc);
+
+    function EndtFunc() {
+     console.timeEnd("Timer Button");
+    }
+
+    //Console trace Button
+    let ConsoleTraceButton = errorBtns[13];
+    ConsoleTraceButton.addEventListener('click', TraceFunc);
+
+    function TraceFunc() {
+     console.trace();
+    }
+
+    //Console trigger Global Button
+    let trigButton = errorBtns[14];
+    trigButton.addEventListener('click', trigFunc);
+
+    function faultyFunc() {
+        if (x === 7) {
+          console.log("x is 7");
+        }  
+     
+    }
+
+    function trigFunc() {
+      window.onerror = faultyFunc();
+    }
+
+    // Step 3: Try/Catch ??????????
+    let TCbutton = errorBtns[15];
+    TCbutton.addEventListener('click', tcFunc);
+
+    function tcFunc() {
+      try {
+          alert('Start of try run'); 
+        //  firstNum = a; //should be a num
+
+          if (typeof(firstNum) != number) {
+            throw new TypeError("firstNum wrong type");
+            
+          }
+
+      } catch (err) {
+    
+        alert(`Error has occurred!`); 
+     
+      } finally {
+        alert('Try-Catch Complete');
+      }
+
+    }
+
+    //Step 4: Throw and Custom Errors
+    let DoNotButton = errorBtns[16];
+    DoNotButton.addEventListener('click', DoNotFunc);
+
+    function DoNotFunc() {
+     throw new Error("Prohibited Button Clicked");
+    }
+
+    //Step 5 - Global Error Handler
+    let errButton = errorBtns[17];
+    errButton.addEventListener('click', errFunc);
+
+    function errFunc() {
+      try {
+         
+
+      } catch (err) {
+    
+        alert(`Error has occurred!`); 
+     
+      } 
+    }
+
+   
+    
+
+
+    
+
+    
+  
+
+
+
+    
+
+
+    
+
+    
+
+    
+
+
+
   </script>
 </body>
 
