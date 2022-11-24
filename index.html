@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lab 9</title>
 
-<!-- Track JS Agent-->
+<!-- Track JS Agent for Step 5-->
 <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
 <script>
   window.TrackJS && TrackJS.install({ 
@@ -95,12 +95,7 @@
       <button>End Timer</button>
       <button>Console Trace</button>
       <button>Trigger a Global Error</button>
-      <!-- I added buttons below-->
-      <button>Try Catch</button>
-      <button>Do Not Click</button>
-      <button>Error Button</button>
-
-
+  
       
     </section>
   </main>
@@ -280,7 +275,6 @@
     }
 
     function trigFunc() {
-      //window.onerror = faultyFunc();
       xFunc();
     }
 
@@ -290,72 +284,6 @@
     });
 
 
-/*
-    // Step 3: Try/Catch ??????????
-    let TCbutton = errorBtns[15];
-    TCbutton.addEventListener('click', tcFunc);
-
-    function tcFunc() {
-      try {
-          alert('Start of try run'); 
-        //  firstNum = a; //should be a num
-
-          if (typeof(firstNum) != number) {
-            throw new TypeError("firstNum wrong type");
-            
-          }
-
-      } catch (err) {
-    
-        alert(`Error has occurred!`); 
-     
-      } finally {
-        alert('Try-Catch Complete');
-      }
-
-    }
-
-    //Step 4: Throw and Custom Errors
-    let DoNotButton = errorBtns[16];
-    DoNotButton.addEventListener('click', DoNotFunc);
-
-    function DoNotFunc() {
-     throw new Error("Prohibited Button Clicked");
-    }
-
-    //Step 5 - Global Error Handler
-    //
-    let errButton = errorBtns[17];
-    errButton.addEventListener('click', errFunc);
-
-    function errFunc() {
-      try {
-         
-
-      } catch (err) {
-    
-        alert(`Error has occurred!`); 
-     
-      } 
-    }
-
-*/ 
-    
-
-
-    
-
-    
-  
-
-
-
-    
-
-
-    
-
-    
 
     
 
